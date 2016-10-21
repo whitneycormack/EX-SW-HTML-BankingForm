@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SW HTML Banking Form</title>
+  </head>
+<body>
+  <header>
+    <h1>HTML Banking Form</h1>
+  </header>
+
+  <form>
+    <fieldset>
+      <legend>Personal Info</legend>
+      First name:
+      <input type="text" id="firstname">
+      Middle Initial:
+      <input type="text" id="middleinitial">
+      Last name:
+      <input type="text" id="lastname">
+      Address:
+      <input type="text" id="address">
+      Email:
+      <input type="text" id="email">
+      Phone Number:
+      <input type="text" id="phone number">
+      LinkedIn url:
+      <input type="text" id="linkedin url">
+    </fieldset>
+  </form>
+
+  <fieldset>
+    <legend>Employer Info</legend>
+      Occupation:
+      <input type="text" id="Occupation">
+      Employer:
+      <input type="text" id="employer">
+      Employer Address:
+      <input type="text" id="employer address">
+  </fieldset>
+
+  <fieldset>
+    <legend>Loan Type</legend>
+      <select name="loan type">
+        <option value="Commercial">Commercial</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Personal">Personal</option>
+        <option value="Mortgage">Mortgage</option>
+      </select>
+  </fieldset> 
+
+  <fieldset>
+    <legend>Loan Amount</legend>
+      <div class="options">
+        <input type="range" min="0" max="500000" value="250000" step="100" onchange="showValue(this.value)" />
+          <span id="range">0</span>
+            <script type="text/javascript">
+            function showValue(newValue)
+            { document.getElementById("range").innerHTML=newValue; }
+            </script>  
+       </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Loan Length</legend>
+      <form action="loan length">
+        <input type="radio" name="loan" value="5 years"> 5 years<br>
+        <input type="radio" name="loan" value="15 years"> 15 years<br>
+        <input type="radio" name="loan" value="30 years"> 30 years
+      </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Special Conditions</legend>
+      <form action="conditions">
+        <input type="checkbox" name="condition" value="I have a down payment">I have a down payment
+        <input type="checkbox" name="condition" value="out-of-state resident">Out-of-state resident
+        <input type="checkbox" name="condition" value="Married">Married
+        <input type="checkbox" name="condition" value="Loan will be co-signed">Loan will be co-signed
+      </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Comments</legend>
+      <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+  </fieldset>
+
+  </form>
+</body>
+</html>
+
+
+
